@@ -1,0 +1,201 @@
+{% extends 'base.html'%}
+    {% block content %}
+    <h1 class="text-info mt-3 fw-bold display-3">For Each in Java</h1>
+    <h4 class="text-secondary fs-3">What is For Each?</h4>
+    <p class="fs-5 text-light mt-4">The use of Java forEach is one of the most common, since we are continually
+        going through collections of objects and the way to go through them is much more comfortable
+        using a forEach statement than a classic loop. We will also see the difference between using 
+        the common and current for and foreach.
+    </p>
+    <hr class="text-info">
+    <h4 class="text-info fs-2">Common use for</h4>
+    <p class="fs-5 text-light mt-4">
+        the use of for is quite common in the work of software developers although we have
+        other functional programming methods such as <span class="text-info">forEach</span>
+         and <span class="text-info">map</span>.
+    </p>
+    <hr class="text-secondary">
+    <p class="fs-5 text-light mt-4">
+        first of all we will instantiate an array and define some integer values <span class="text-info">​​remember that in 
+        java we can only have arrays of a single type for example strings or integers 
+        but only of one type</span>.
+    </p>
+    <!-- Code -->
+    <div class="bg-dark col-md-12 p-3 rounded fs-5">
+        <code>
+            <span class="text-info">int</span> [] <span class="text-warning">exampleName</span>
+            = new <span class="text-info">int</span> [] {<span class="text-danger">1,2,3,4,5,6,7,8,9,10</span>};
+        </code>
+    </div>
+    <p class="fs-5 text-light mt-4">
+        Now we will use the for loop to iterate through the array and print the values.
+    </p>
+    <!-- Code -->
+    <div class="bg-dark col-md-12 p-3 rounded fs-5">
+        <code>
+            <span class="text-info">for</span>(<span class="text-info">int</span> <span class="text-primary">i</span> = 0;
+            <span class="text-primary">i</span> < <span class="text-warning">exampleName</span>.length;
+            <span class="text-primary">i</span>++) {<br>
+                <!-- First option -->
+                <span class="ms-5">
+                <span class="text-info">System.out.printf</span>("index : 
+                <span class="text-danger">%d</span> [<span class="text-danger">%d</span>]
+                <span class="text-success">\n</span>",<span class="text-primary">i</span>,
+                <span class="text-warning">exampleName</span>[<span class="text-primary">i</span>]);<br>
+                </span>
+                <span class="ms-5">
+                <span class="text-secondary">//Or more Sample</span><br>
+                </span>
+                <!-- Second option -->
+                <span class="ms-5">
+                <span class="text-info">System.out.println</span>(<span class="text-warning">exampleName</span>
+                [<span class="text-primary">i</span>]);
+                </span>
+            <br>}
+        </code>
+    </div>
+    <p class="fs-5 text-light mt-4">
+        and this is what the complete code would look like.
+    </p>
+    <!-- Code -->
+    <div class="bg-dark col-md-12 p-3 rounded fs-5">
+        <code>
+            <span class="text-success">public class </span><span class="text-warning">ForArray</span> {
+            <br>
+                <span class="ms-3">
+                    <span class="text-success">public static void</span> 
+                    <span class="text-warning">main</span>(<span class="text-primary">String[]</span>
+                     args){
+                </span>
+            <br>
+            <span class="ms-4">
+                <span class="text-info">int</span> [] <span class="text-warning">exampleName</span>
+                = new <span class="text-info">int</span> []
+                {<span class="text-danger">1,2,3,4,5,6,7,8,9,10</span>};<br>
+                <span class="ms-4">
+            </span>
+
+                <span class="text-info">for</span>(<span class="text-info">int</span> <span class="text-primary">i</span> = 0;
+                <span class="text-primary">i</span> < <span class="text-warning">exampleName</span>.length;
+                <span class="text-primary">i</span>++) {
+                </span><br>
+                <!-- First option -->
+                <span class="ms-5">
+                <span class="text-info">System.out.printf</span>("index : 
+                <span class="text-danger">%d</span> [<span class="text-danger">%d</span>]
+                <span class="text-success">\n</span>",<span class="text-primary">i</span>,
+                <span class="text-warning">exampleName</span>[<span class="text-primary">i</span>]);<br>
+                </span>
+                <span class="ms-5">
+                <span class="text-secondary">//Or more Sample</span><br>
+                </span>
+                <!-- Second option -->
+                <span class="ms-5">
+                <span class="text-info">System.out.println</span>(<span class="text-warning">exampleName</span>
+                [<span class="text-primary">i</span>]);
+                </span>
+            <br>
+        <span class="ms-4">}</span><br><span class="ms-3">}</span><br>}
+        </code>
+    </div>
+    <h4 class="text-info fs-2 mt-3">For Each</h4>
+    <hr class="text-info">
+    <p class="fs-5 text-light mt-4">
+        as we can see it is not so difficult but there is a much simpler way to do it with the 
+        forEach we will replace the for block with this new code.
+    </p>
+    <!-- Code -->
+    <div class="bg-dark col-md-12 p-3 rounded fs-5">
+        <code>
+            <span class="text-success">public class </span><span class="text-warning">ForArray</span> {
+            <br>
+                <span class="ms-3">
+                    <span class="text-success">public static void</span> 
+                    <span class="text-warning">main</span>(<span class="text-primary">String[]</span>
+                     args){
+                </span>
+            <br>
+            <span class="ms-4">
+                <span class="text-info">int</span> [] <span class="text-warning">exampleName</span>
+                = new <span class="text-info">int</span> []
+                {<span class="text-danger">1,2,3,4,5,6,7,8,9,10</span>};<br>
+                <span class="ms-4">
+            </span>
+            <span class="text-success">Arrays</span>.<span class="text-primary">stream</span>(
+                <span class="text-warning">exampleName</span>).<span class="text-success">forEach
+
+                </span>(<span class="text-warning">item</span>->{<br>
+               <span class="ms-5"> <span class="text-info">System.out.println</span> 
+               (<span class="text-warning">item</span>);</span><br>
+            <span class="ms-4">});</span>
+            
+            <br><span class="ms-3">}</span><br>}
+        </code>
+    </div>
+    <hr class="text-info">
+    <p class="fs-5 text-light mt-4">
+        The <span class="text-info">forEach</span> is quite used to go through arrays although the 
+        map method may be more used but good to implement our for each we must call a method called
+        <span class="text-info">stream</span> We could say that <span class="text-info">Streams
+        </span> are "wrappers" for data collections that allow us to operate with these collections 
+        and make massive data processing fast and easy to read. An important thing to note is that
+        <span class="text-info">Streams</span> do <span class="text-primary">not store data and are 
+        not a data structure itself</span>. then we invoke the <span class="text-info">foreach </span>
+        where it is in parentheses we will assign a value to each index of the array in this case 
+        <span class="text-warning">item</span> and then we will print it. We can see that it is a 
+        little simpler and the code looks cleaner and more readable.
+    </p>
+    <hr class="text-info" />
+    <p class="fs-5 text-light mt-4">
+        Thank you for view my post...
+    </p>
+    <hr class="text-info"/>
+    <h1 class="text-info fs-1 text-center">Add Comments</h1>
+    <div class="card bg-transparent rounded shadow col-md-8  mt-3 m-auto">
+        <div class="card-header">
+            <p class="text-secondary"><i class="bi bi-person-fill">Anonymous</i></p>
+        </div>
+        <div class="card-body">
+
+            <form action="{% url 'create_comment'%}" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <textarea class="form-control text-info bg-transparent border-0 rounded shadow" 
+                    name="description" id="description" rows="5" placeholder="Enter your Comment..."></textarea>
+                </div>
+                <div class="w-100 d-flex justify-content-center">
+                    <button class="btn btn-outline-info shadow w-50 fw-bold">Send</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    
+    <hr class="text-info"/>
+    <div class="row">
+        {% for comment in comments %}
+        <div class="col-md-8 m-auto mt-3">
+            <div class="card bg-transparent rounded shadow col-md-12 mt-3 m-auto">
+                <div class="card-header row">
+                    <p class="text-secondary col-md-10"><i class="bi bi-person-fill">Anonymous</i></p>
+                    <form action="{% url 'delete_comment' comment.id %}" method="post" class="col-md-2" id="form-delete">
+                        {% csrf_token %}
+                        <button type="button" class="btn btn-outline-info shadow fw-bold w-100" onclick="deleteComment()">
+                            <i class="bi bi-trash3-fill"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <p class="text-info">{{comment.description}}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="alert alert-info col-md-8 m-auto" role="alert">
+           We dont Have any comments
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+    
+    

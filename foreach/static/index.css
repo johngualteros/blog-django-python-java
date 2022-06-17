@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #191923;
+    overflow: overlay;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #0dcaf0;
+    border-radius: 10px;
+}
+.navbar{
+    z-index: 2;
+}
+button{
+    margin-right: 20px !important;
+}
+.swal2-show{
+    background: #3BE3D9 !important;
+}
+.confirm{
+    background-color: #222 !important;
+}
+.cancel{
+    background-color: #fff !important;
+}
+.swal2-success-circular-line-right,.swal2-success-circular-line-left,.swal2-success-fix{
+    background-color: transparent !important;
+}
