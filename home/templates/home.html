@@ -1,4 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Hello World</h1>
+    <div class="row p-5">
+        <div class="col-md-2">
+            <button class="btn btn-info rounded shadow btn-sm fw-bold text-light">Log In</button>
+        </div>
+    </div>
+    <div class="row vh-100 px-5">
+        <div>
+            <h1 class="text-light display-1 fw-bold">Welcome to my blog</h1>
+            <h1 class="text-light display-1 fw-bold mt-2">Architecture <span class="text-info">Ja/Py</span></h1>
+            <h5 class="text-secondary fs-1 fw-bold mt-5">Hi i am <span class="text-info">John Gualteros</span> Full Stack Developer</h5>
+        </div>
+    </div>
+    <div class="row px-5">
+        <h1 class="text-info display-1 fw-bold text-center">
+            Another Of My Projects
+        </h1>
+        <div class="row d-flex justify-content-center py-5" id="card-container">
+
+        </div>
+    </div>
 {% endblock %}
