@@ -22,21 +22,8 @@
                         </div>
                         <div class="col-md-12">
                             <h1 class="text-center fw-bold">{% block titleForm %}{% endblock %}</h1>
-                            <form method="post" action="">
-                                <div class="mb-3 form-group">
-                                    <label for="user" class="form-label fs-5 text-info fw-bold">UserName</label>
-                                    <input class="form-control border border-2 fw-bold border-info shadow bg-dark text-light" type="text" placeholder="Enter your User Name" name="user" id="user" required>
-                                </div>
-                                <div class="mb-3 form-group">
-                                    <label for="password" class="form-label fs-5 text-info fw-bold">Password</label>
-                                    <input class="form-control border border-2 fw-bold border-info shadow bg-dark text-light" type="password" placeholder="Enter your Password" name="password" id="password" required>
-                                </div>
-                                <p>If you already have account<a class="fw-bold text-info"> Log in </a> If you Register a new Acoount <a class="fw-bold text-info">Register</a> Or if you want go to home <a class="fw-bold text-info">Click Here</a></p>
-                                <button type="submit" class="btn bg-info bg-opacity-50 shadow rounded border border-info fw-bold w-100 fs-5 my-2">
-                                    {% block textButton %}
-                                    {% endblock %}
-                                </button>
-                            </form>
+                            {% block form %}
+                            {% endblock %}
                         </div>
                     </div>
                 </div>

@@ -2,8 +2,8 @@
 {% block content %}
     <div class="row p-5">
         <div class="col-md-4 d-flex">
-            <button class="btn btn-info rounded shadow btn-sm fw-bold text-light me-3">Log In</button>
-            <button class="btn btn-light rounded shadow btn-sm text-info fw-bold">Register</button>
+            <a href={% url 'login'%}><button class="btn btn-info rounded shadow btn-sm fw-bold text-light me-3">Log In</button></a>
+            <a href={% url 'register' %}><button class="btn btn-light rounded shadow btn-sm text-info fw-bold">Register</button></a>
         </div>
     </div>
     <div class="row vh-100 px-5">
