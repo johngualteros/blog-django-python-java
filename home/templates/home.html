@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="row p-5">
-        <div class="col-md-2">
-            <button class="btn btn-info rounded shadow btn-sm fw-bold text-light">Log In</button>
+        <div class="col-md-4 d-flex">
+            <button class="btn btn-info rounded shadow btn-sm fw-bold text-light me-3">Log In</button>
+            <button class="btn btn-light rounded shadow btn-sm text-info fw-bold">Register</button>
         </div>
     </div>
     <div class="row vh-100 px-5">
         <div>
-            <h1 class="text-light display-1 fw-bold">Welcome to my blog</h1>
+            <h1 class="text-light display-1 fw-bold mt-5">Welcome to my blog</h1>
             <h1 class="text-light display-1 fw-bold mt-2">Architecture <span class="text-info">Ja/Py</span></h1>
             <h5 class="text-secondary fs-1 fw-bold mt-5">Hi i am <span class="text-info">John Gualteros</span> Full Stack Developer</h5>
         </div>
@@ -19,5 +20,10 @@
         <div class="row d-flex justify-content-center py-5" id="card-container">
 
         </div>
+    </div>
+    <div class="row p-5">
+        <h1 class="text-center display-1 fw-bold text-info mt-5">Contact Me</h1>
+        <a href="mailto:gualterosjohn40@gmail.com" class="btn bg-info bg-opacity-10 border border-info rounded shadow fw-bold btn-lg
+        fs-1 text-light py-5 mt-5">Send Me a Email!</a>
     </div>
 {% endblock %}

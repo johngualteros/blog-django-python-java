@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href={% static 'main.css' %}>
+</head>
+<body>
+    <div class="container col-md-10 h-100 d-flex justify-content-center align-items-center">
+        <div class="h-75 w-100 bg-dark text-light rounded shadow">
+            <div class="row h-100">
+                <div class="col-md-5 col-lg-5 col-xl-6 d-none d-lg-block rounded-start bg">
+                </div>
+                <div class="col-md-12 col-lg-7 col-xl-6 py-4 px-5 rounded-end">
+                    <div class="row">
+                        <div class="w-100 text-end">
+                            <img src="https://static.vecteezy.com/system/resources/previews/004/282/030/original/jg-logo-monogram-with-gold-colors-and-shield-shape-design-template-free-vector.jpg"
+                            class="img-fluid rounded-circle" width="48">
+                        </div>
+                        <div class="col-md-12">
+                            <h1 class="text-center fw-bold">{% block titleForm %}{% endblock %}</h1>
+                            <form method="post" action="">
+                                <div class="mb-3 form-group">
+                                    <label for="user" class="form-label fs-5 text-info fw-bold">UserName</label>
+                                    <input class="form-control border border-2 fw-bold border-info shadow bg-dark text-light" type="text" placeholder="Enter your User Name" name="user" id="user" required>
+                                </div>
+                                <div class="mb-3 form-group">
+                                    <label for="password" class="form-label fs-5 text-info fw-bold">Password</label>
+                                    <input class="form-control border border-2 fw-bold border-info shadow bg-dark text-light" type="password" placeholder="Enter your Password" name="password" id="password" required>
+                                </div>
+                                <p>If you already have account<a class="fw-bold text-info"> Log in </a> If you Register a new Acoount <a class="fw-bold text-info">Register</a> Or if you want go to home <a class="fw-bold text-info">Click Here</a></p>
+                                <button type="submit" class="btn bg-info bg-opacity-50 shadow rounded border border-info fw-bold w-100 fs-5 my-2">
+                                    {% block textButton %}
+                                    {% endblock %}
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
